@@ -1,4 +1,4 @@
-<h3><% request.param[word] %> tweets near you:</h3>
+<h3><% request.params[:word] %> tweets near you:</h3>
 
 <ul>
   <% @tweets.each do |tweet| %>
