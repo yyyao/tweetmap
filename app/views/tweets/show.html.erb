@@ -3,9 +3,11 @@
 <ul>
   <% @tweets.each do |tweet| %>
     <li>
-      <strong>@<%= tweet["from_user"] %></strong>
 
       <%= image_tag(tweet["profile_image_url"]) %>
+      <strong>@<%= tweet["from_user"] %></strong>
+
+
 
       <%= tweet["text"] %>
     </li>
