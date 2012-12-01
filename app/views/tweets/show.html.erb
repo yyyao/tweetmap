@@ -1,4 +1,24 @@
-<h3>"<%= request.params[:word] %>" tweets near you:</h3>
+<form method="get" action="/tweets">
+  <input type="hidden" name="lat" value="<%=params[:lat]%>">
+  <input type="hidden" name="lon" value="<%=params[:lon]%>">
+  <h3>
+    <input type="text" name="word" value="<%= params[:word] %>">
+    tweets near you within 
+
+  
+
+  <select name=”radius”>
+  <option>2mi</option>
+  <option>5mi</option>
+  <option>10mi</option>
+  <option>15mi</option>
+  <option>20mi</option>
+	  
+</select>
+
+  <input type="submit" value="Search" >
+</form>
+</h3>
 
 <ul>
   <% @tweets.each do |tweet| %>
