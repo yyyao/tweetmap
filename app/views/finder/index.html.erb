@@ -1,0 +1,9 @@
+<script>
+  navigator.geolocation.getCurrentPosition(function(loc) {
+    var lat = loc.coords.latitude;
+    var lon = loc.coords.longitude;
+    var word = 'rails'
+    window.location.href = '/tweets?lat=' + escape(lat) + '&lon=' + escape(lon) + '&word=' escape(word);
+
+  });
+</script>

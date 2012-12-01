@@ -1,0 +1,10 @@
+<h3><% request.param[word] %> tweets near you:</h3>
+
+<ul>
+  <% @tweets.each do |tweet| %>
+    <li>
+      <strong>@<%= tweet["from_user"] %></strong>
+      <%= tweet["text"] %>
+    </li>
+  <% end %>
+</ul>
